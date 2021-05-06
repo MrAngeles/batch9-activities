@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Deftones - Album Release</title>
+    
+</head>
+<body>
+
+    <header id="header">
+        <nav class="navbar">
+            <div class="brand-title">
+                <img src="/landing-page/assets/images/logo-img.png" alt="" id="header-img">
+            </div>
+            <a href="#daf" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </a>
+            <div class="navbar-links" id="nav-bar">
+            <ul>
+                <li><a href="#home" class="nav-links">Home</a></li>
+                <li><a href="#albums" class="nav-links">Albums</a></li>
+                <li><a href="#videos" class="nav-links">Videos</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+          
+    <section id="home">
+        <div>
+            <button id="btn1" class="buy">PRE-ORDER</button>
+        </div>             
+
+        <!-- MODAL FOR BUY BUTTON-->
+        <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="buy-content">
+                    <h1>Currently the album is on pre-order</h1><br>
+                    <p>Please fill out your details to be notified once the album is available</p>
+
+                <form method="get" action="submit.html">
+                    <div id="name">
+                        <label for="name" id="name-label">Name</label>
+                        <input required type="text" id="name" name="name" placeholder="Name" minlength="2" maxlength="20" >
+                        <label for="email" id="email-label">Email</label>
+                        <input required type="email" name="email" id="email" placeholder="Email Address">
+                        <div id="button">
+                            <button type="submit" id="submit">Submit</button>
+                        </div>
+                    </div>  
+
+                </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL FOR BUY BUTTON-->
+
+        <!-- MODAL FOR LISTEN BUTTON -->
+       
+    </section>  
+    
+    <section id="albums">
+        <div class="album-container1">
+           <img src="/landing-page/assets/images/ohms_deftones.jpg" alt="">
+           <h1>Ohms</h1>
+        </div>
+        <div class="album-container2">
+            <img src="/landing-page/assets/images/deftones_-_gore_600_600.jpg" alt="">
+            <h1>Gore</h1>
+        </div>
+        <div class="album-container3">
+            <img src="/landing-page/assets/images/Deftons-Diamond-Eyes-600x600.jpg" alt="">
+            <h1>Diamond Eyes</h1>
+        </div>
+    </section>
+
+    <section id="videos">
+        <div id="video1">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/j-t-Qjs2PiM"></iframe>
+            <h1>Interview</h1>
+        </div>
+
+        <div id="video2">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/Bj0QxWdAyts"></iframe>
+            <h1>Album Review</h1>
+        </div>
+        <div id="video3">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/icipOXzpKjg"></iframe>
+            <h1>Live Show</h1>
+        </div>
+    </section>
+
+    
+    
+      <script src="assets/js/script.js"></script>
+</body>
+</html>
