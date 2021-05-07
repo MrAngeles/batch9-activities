@@ -203,12 +203,12 @@ section#videos {
       align-items: center;
   }
 
-  #video1, #video2, #video3 {
+  #video {
       color: white;
       text-align: center;
   }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -265,4 +265,23 @@ section#videos {
         width: 10em;
         height: 10em;
     }
+
+    section{
+        height: auto;
+    }
+
+    section#albums, section#videos {
+        padding-top: 50px;
+    }
+
+    section#home {
+        height: 100vh;
+    }
+    /* .album-container1, .album-container2, .album-container3  {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;        
+        width: 100%;
+        margin-left: 10px;
+    } */
 }
