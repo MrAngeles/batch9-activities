@@ -274,14 +274,9 @@ section#videos {
         padding-top: 50px;
     }
 
-    section#home {
+    section#home, section#albums, section#videos {
         height: 100vh;
+        
     }
-    /* .album-container1, .album-container2, .album-container3  {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;        
-        width: 100%;
-        margin-left: 10px;
-    } */
+   
 }
