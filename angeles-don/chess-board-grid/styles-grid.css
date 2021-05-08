@@ -1,12 +1,12 @@
 
 
 body {
-    height: 90vh;    
+    height: 90vh;  
     display: grid;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    background-color: red;
+    background-color: pink;
 }
 
 

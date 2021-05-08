@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Righteous', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.navbar-links li:hover {
+    background-color: white;
+    
+    
+}
+
+.navbar-links li a:hover {
+    color: black;
+    
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+section {
+    height: 100vh;
+}
+
+section#home {
+    background: url('/landing-page/assets/images/deftones-home.jpg') no-repeat center center/cover;;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;       
+  }
+
+.buy, .listen {
+    border: 1px solid white;
+    background: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10vh;
+    padding: 2vh;
+    cursor: pointer;
+    border-radius: 8vh;
+}
+
+.buy:hover {
+    background-color: white;
+    color: black;
+}
+
+.listen:hover {
+    background-color: white;
+    color: black;
+}
+
+/* MODAL FOR BUY BUTTON*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.modal-content{
+    background-color: white;
+    margin: 20% auto;
+    padding: 20px;
+    width: 50%;  
+    border-radius: 25px;  
+    text-align: center;
+}
+
+.closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buy-content {
+    margin-top: 10px;
+}
+
+.buy-content h1 {
+    margin-bottom: 10px;
+}
+
+.buy-content p {
+    margin-bottom: 20px;
+}
+
+#button {
+    margin-top: 10px;
+}
+/* MODAL FOR BUY BUTTON*/
+
+section#albums {
+    background: url('/landing-page/assets/images/deftones_album.jpg') no-repeat center center/cover;;
+  }
+
+#albums {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;   
+    text-align: center;
+    align-items: center;
+}
+
+#albums img {
+    width: 400px;
+    height: 400px;
+}
+
+
+section#videos {
+    background: url('/landing-page/assets/images/deftones_about.jpg') no-repeat center center/cover;;
+  }  
+
+  #videos {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+
+  #video {
+      color: white;
+      text-align: center;
+  }
+
+@media (max-width: 1200px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    #btn {
+        font-size: 5vh;
+        padding: 1vh;
+        }
+
+
+    #albums {
+        flex-direction: column;
+    }    
+
+    #albums img {
+        width: 10em;
+        height: 10em;
+    }
+
+    #videos {
+        flex-direction: column;
+        
+    }
+    
+    #videos iframe{
+        width: 10em;
+        height: 10em;
+    }
+
+    section{
+        height: auto;
+    }
+
+    section#albums, section#videos {
+        padding-top: 50px;
+    }
+
+    section#home, section#albums, section#videos {
+        height: 100vh;
+        
+    }
+   
+}
