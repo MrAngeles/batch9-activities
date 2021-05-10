@@ -95,7 +95,7 @@ section {
 }
 
 section#home {
-    background: url('/landing-page/assets/images/deftones-home.jpg') no-repeat center center/cover;;
+    background: url('../images/deftones-home.jpg') no-repeat center center/cover;;
     display: flex;
     align-items: center;
     justify-content: space-around;       
@@ -176,7 +176,7 @@ section#home {
 /* MODAL FOR BUY BUTTON*/
 
 section#albums {
-    background: url('/landing-page/assets/images/deftones_album.jpg') no-repeat center center/cover;;
+    background: url('../images/deftones_album.jpg') no-repeat center center/cover;;
   }
 
 #albums {
@@ -194,7 +194,7 @@ section#albums {
 
 
 section#videos {
-    background: url('/landing-page/assets/images/deftones_about.jpg') no-repeat center center/cover;;
+    background: url('../images/deftones_about.jpg') no-repeat center center/cover;;
   }  
 
   #videos {
