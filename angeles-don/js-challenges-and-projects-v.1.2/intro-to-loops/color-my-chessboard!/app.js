@@ -4,4 +4,17 @@ const squares = Array.from(document.querySelectorAll('.grid div'))
 //Your goal is to add a chessboard color pattern to this blank board using loops and Arrays.
 //write code here
 
-/* comment */
+for(let i = 0; i < squares.length; i++){
+    if(i % 2 === 0){
+        squares[i].style.backgroundColor = "white";
+    } else{
+        squares[i].style.backgroundColor = "green";
+    }
+}
+
+/* kahit ano */
+
+
+
+
+

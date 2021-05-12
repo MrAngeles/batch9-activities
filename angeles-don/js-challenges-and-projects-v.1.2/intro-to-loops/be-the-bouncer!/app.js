@@ -24,3 +24,22 @@ const nightClubRegister = [
         gender: 'male'
     }
 ]
+
+for (i = 0; i < nightClubRegister.length; i++){
+    if (nightClubRegister[i].age < 18){
+    if(nightClubRegister[i].gender === 'male'){
+    console.log('Hi  Mr ' + nightClubRegister[i].name + ',' + " I'm sorry you are not allowed!");
+        }
+    else{
+    console.log('Hi  Mrs ' + nightClubRegister[i].name + ',' + " I'm sorry you are not allowed!");
+}
+    }
+    else{
+        if(nightClubRegister[i].gender === 'male'){
+            console.log('Hi  Mr ' + nightClubRegister[i].name + ',' + " I'm glad you are allowed!");
+                }
+            else{
+            console.log('Hi  Mrs ' + nightClubRegister[i].name + ',' + " I'm glad you are allowed!");
+        }
+    }
+  }
