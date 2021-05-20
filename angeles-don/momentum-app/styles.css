@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;800&display=swap');
+
+
+html {
+    background-image: url(../momentum-app/images/bg-garden.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+#dateTimeContainer {
+    color: rgb(192, 186, 186);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    height: 100%;    
+    text-align: center;
+   
+}
+
+#date {
+    font-size: 8vmin;
+    
+}
+
+#time {
+    font-size: 5vmin;
+}
+
+
+#quoteContainer {
+    color: white;
+    text-align: center;
+    margin-top: 6vmin;
+    font-size: 2vmin;
+    
+}
+
+#quoteBtn, #addQuote {
+  border: none;
+  padding: 10px;
+  background: none;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+}
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 50vmin;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    border-radius: 20px;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .modal-header {
+    background: var(--modal-color);
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .modal-body {
+    padding: 10px 20px;
+    background: #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+
+  
+  .close {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  form, h1{
+    text-align: center;
+    color: white;
+  }
+
+
+  #new-quotes-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40vmin;
+      margin-left: 4vmin;
+  }
+
+  #add-quotes-button {
+      margin-top: 1vmin;
+  }
+
+/* end modal */
+
+.js-greetings {
+  cursor: pointer;
+}
+
+.goal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(192, 186, 186);
+    font-size: 2vmin
+}
+
+#goal1 {
+    display: block;
+    background: 0;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    color: white;
+    font-size: 1.75rem;
+    text-align: center;
+    outline-style: none;
+}
+
+#focus {
+    background-color: rgba(0, 0, 0, .7);
+    padding: 1vmin;
+    border-radius: 10px;
+}
+
+
+#toDo-Container {
+    margin-top: 5vmin;
+    text-align: center;
+}
+
+#inputField, .what-name {
+    background-color: rgba(0, 0, 0, .7);
+    border: 0;
+    border-bottom: 2px solid #fff;
+    color: white; 
+    opacity: 1;
+    font-size: 3vmin;
+    text-align: center;
+    outline-style: none;
+    width: 15vmin;
+}
+
+.what-name {
+  font-size: 2vmin;
+  width: 18vmin;
+}
+
+/* todo list */
+
+
+
+p {
+  color: white;
+  text-decoration-color: red;
+  cursor: pointer;
+}
+
+#goalE{
+  color: white;
+  font-size: 8vmin;
+  cursor: pointer;
+}
+
+/* /// */
+
+
