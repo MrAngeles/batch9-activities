@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../momentum-app/styles.css">
+    <title>Momentum App</title>
+</head>
+<body>
+ 
+
+    <div id="dateTimeContainer">
+        <div id="date">
+            <span id="dayName">Day</span>,
+            <span id="month">Month</span>
+            <span id="daynum">00</span>,
+            <span id="year">Year</span>
+        </div>
+        <div id="time">
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+            <span id="period">AM</span>
+        </div>
+    </div>
+
+    <div id="quoteContainer">
+        <span id="quote">Generate or add quote by clicking the options below!</span>
+        <span id="author"></span><br>
+        <button id="quoteBtn">Next Quote</button>
+        <button id="addQuote">Add Quote</button>
+    </div>
+
+    <!-- modal -->
+    <div id="my-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Add your own quote here</h2>
+          </div>
+          <div class="modal-body">
+            <form onsubmit="return false" autocomplete="off">
+                <div id="new-quotes-container">
+
+                  <label for="quote"><b>Quote:</b></label>
+                  <input type="text" placeholder="Add new quote here" name="addquote" id="addquote" required>
+                  <label for="author"><b>Author:</b></label>
+                  <input type="text" placeholder="Add new author here" name="addauthor" id="addauthor" required>
+              
+                  <button type="submit" id="add-quotes-button">Register new quote</button>
+                </div>
+              </form>
+          </div>
+         
+          </div>
+        </div>
+      
+
+    <!-- end modal -->
+  
+    <form class="js-form form">
+        <h1><input type="text" placeholder="What is your name?" class="what-name"/></h1> 
+    </form>
+    <h1 class="js-greetings greetings"></h1>
+
+
+    <div class="goal">
+        <h1 id="focus">What's your focus today?</h1>
+        <input id="goal1" type="text" autocomplete="off">
+        <div id="goalE"></div>
+    </div>
+ 
+
+    
+    <div id="toDo-Container">
+        <h1>To Do List</h1>
+        <div class="container">
+            <input id="inputField" type="text" placeholder="enter to do"><button id="addToDo" style="display: none;">+</button>
+            <div class="to-dos" id="toDoContainer">
+            </div>
+            <div id="divID"></div>
+        </div>
+    </div>
+     
+
+    <script src="javaScript/time.js"></script>
+    <script src="javaScript/main.js"></script>    
+    <script src="javaScript/greeting.js"></script>
+    <script src="javaScript/randomQuotes.js"></script>
+    <script src="javaScript/todo.js"></script>
+    <script src="javaScript/main-focus.js"></script>
+</body>
+</html>
