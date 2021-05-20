@@ -3,6 +3,8 @@ const input = form.querySelector("input");
 const greeting = document.querySelector(".js-greetings");
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
+
+
 function saveName(text){
   localStorage.setItem(USER_LS, text);
 }
@@ -21,12 +23,14 @@ function paintGreeting(text){
   greeting.classList.add(SHOWING_CN);
   greeting.innerText = `Good day to you, ${text}`;
   document.querySelector(".js-form").style.display = "none";
+  input.value = "";
   greeting.style.display = 'block';
 }
 
 greeting.addEventListener('dblclick', function(){
   form.style.display = "block";
   greeting.style.display = 'none';
+  
 })
 
 
