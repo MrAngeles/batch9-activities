@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+
+*, *::after, *::before{
+  box-sizing: border-box; 
+  font-family: 'Sigmar One', cursive;
+}
+
+:root {
+    --cell-size: 15vmin;
+    --mark-size: calc(var(--cell-size) * .9);
+}
+
+
+body{
+    margin: 0;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+#indicator {
+    text-align: center;
+    padding-bottom: 5vh;
+    color: white;
+    font-size: 5vh;
+}
+.board {
+    /* height: 15vmin; */
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    position: relative;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3)
+{
+    border-top: none;
+}
+
+.cell:nth-child(3n + 1){
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3){
+    border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7)
+{
+    border-bottom: none;
+}
+
+.cell.x, .cell.o {
+    cursor: not-allowed;
+}
+
+.cell.x::before,
+.cell.x::after {
+    background-color: black;
+}
+
+.cell.o::before
+ {
+    border:2vmin solid lightslategray;
+    border-radius:50%;
+    background:rgba(0,0,0,0);
+}
+
+.board.x .cell:not(.x):not(.o):hover::before,
+.board.x .cell:not(.x):not(.o):hover::after
+ {
+ background-color: lightslategray;
+}
+
+.board.o .cell:not(.x):not(.o):hover::before {
+    border:2vmin solid lightslategray;
+    border-radius:50%;
+    background:rgba(0,0,0,0);
+}
+
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.o):hover::before,
+.board.x .cell:not(.x):not(.o):hover::after {
+    content:'';
+    position: absolute;
+    width: calc(var(--mark-size)* .15);
+    height: var(--mark-size);
+    
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.o):hover::before {
+    transform: rotate(45deg);
+    border-radius: 1.5vmin;
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.o):hover::after {
+    transform: rotate(-45deg);
+    border-radius: 1.5vmin;
+}
+
+
+.cell.o::before,
+.cell.o::after,
+.board.o .cell:not(.x):not(.o):hover::before,
+.board.o .cell:not(.x):not(.o):hover::after {
+    content:'';
+    position: absolute;
+    width: var(--mark-size);
+    height: var(--mark-size);
+    border-radius: 50%;
+}
+
+.cell.o::before,
+.board.o .cell:not(.x):not(.o):hover::before {
+    width: calc(var(--mark-size) *.9);
+    height: calc(var(--mark-size) *.9);
+    /* border:2vmin solid white; */
+    border-radius:50%;
+    background:rgba(0,0,0,0);
+    
+}
+
+
+.board.o .cell:not(.x):not(.o):hover::after  {
+    width: calc(var(--mark-size) *.9);
+    height: calc(var(--mark-size) *.9);
+    /* border:2vmin solid white; */
+    border-radius:50%;
+    background:rgba(0,0,0,0); 
+}
+
+.cell.o::after {
+    width: calc(var(--mark-size) *.9);
+    height: calc(var(--mark-size) *.9);
+    border:2vmin solid white;
+    border-radius:50%;
+    background:rgba(0,0,0,0);
+}
+
+
+.winning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+}
+
+.winning-message button {
+    font-size: 5vmin;
+    cursor: pointer;
+    border-radius: 30px;
+    outline: none;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.winning-message.show{
+    display: flex;
+}
+
+
+/* turn selection */
+
+.turn-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+}
+
+.turn-container button {
+    font-size: 5vmin;
+    cursor: pointer;
+    border-radius: 30px;
+    outline: none;
+    text-align: center;
+    padding: 10px;
+}
+
+
+#btnHistory {
+    display: flex;
+    justify-content: center;
+    padding-top: 2vmin;
+       
+}
+
+#btnHistory button {
+    margin-left: 4vmin;
+    margin-right: 4vmin;
+    cursor: pointer;
+}
+
+
+
